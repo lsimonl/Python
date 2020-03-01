@@ -44,7 +44,12 @@ def sentiment (path,page_no):
     for n in number:
         a="Sentence %s"%n
         sentence_number.append(a)
-        
+    
+    plt.figure()
+    ax = plt.subplots()
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    plt.title("Sentiment Analyse")
     plt.xlabel('Number of Sentence')
     plt.ylabel("Probability")
     plt.plot(sentence_number,pos_score,label = 'positive feeling',color='g')
