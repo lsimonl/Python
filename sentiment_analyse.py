@@ -44,13 +44,18 @@ def sentiment (path,page_no):
     for n in number:
         a="Sentence %s"%n
         sentence_number.append(a)
-        
+    
+    plt.figure()
+    ax = plt.subplots()
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    plt.title("Sentiment Analyse")
     plt.xlabel('Number of Sentence')
-    plt.ylabel("Probability")
+    plt.ylabel("Probability/Complexity")
     plt.plot(sentence_number,pos_score,label = 'positive feeling',color='g')
     plt.plot(sentence_number,neg_score,label="negative feeling",color='r')
     plt.plot(sentence_number,neu_score,label='neutral feeling',color='b')
-    plt.plot(sentence_number,compound_score,label= 'complexity',color='orange')
+    plt.bar(sentence_number,compound_score,label= 'complexity',color='orange')
     plt.legend()
     plt.show()
       
