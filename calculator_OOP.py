@@ -5,7 +5,7 @@ class Calculator:
 ####################类方法###################################
     
     def __init__(self, price, height, width, name='simple calculator'):
-    #激活一个object,所有的对象的self都带有上述指定属性，注意是否默认
+    #初始一个object,所有的对象的self都带有上述指定属性，注意是否默认
         self.name = name
         self.price = price
         self.hi = height
