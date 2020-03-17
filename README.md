@@ -1,2 +1,2 @@
-# Python_NLP
-natural language processing by Python
+# Python
+Machine learning + NLP by Python
