@@ -12,12 +12,10 @@ iris = datasets.load_iris()
 x_data = iris['data']
 y_data = iris['target']
 
-def cross_validation():
-    x_train, x_test, y_train, y_test = train_test_split(
-            x_data,y_data,test_size=0.3)
-    return x_train,x_test,y_train,y_test
 
-cross_validation()
+x_train, x_test, y_train, y_test = train_test_split(x_data,y_data,test_size=0.3)
+   
+
 knn = KNeighborsClassifier()
 knn.fit(x_train,y_train)  #fit 类方法用来训练模型
 prediction = knn.predict(x_test) #predict 用来预测测试集
