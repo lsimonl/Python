@@ -1,2 +1,2 @@
 # Python
-Machine learning + NLP by Python
+Machine learning + Neural Network + NLP by Python
