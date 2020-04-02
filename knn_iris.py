@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import preprocessing
 from sklearn.metrics import accuracy_score
-
+import pickle
 #######################数据加载及标准化#######################
 iris = datasets.load_iris()
 #查看数据集 字典分为data 和 target，data具有4个属性，target具有三个类别
@@ -38,5 +38,8 @@ accuracy(y_test,prediction)
 print(estimator.score(x_test,y_test))
 #print(precision_score(y_test,prediction,average ='macro'))  其他两种accuracy的measurement
 #print(prediction,y_test)    
-    
+
+#########################训练模型保存#####################
+with open('save/iris_model.pickle','wb') as f:
+    pickle.dump(estimator,f)
     
